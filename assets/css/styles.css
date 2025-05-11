@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #4a90e2;
-    --secondary-color: #f7a73b;
+    --secondary-color: #295F98;
     --third-color: #1c579c;
     --dark-blue: #0d2c4f;
     --text-color: #555;
@@ -10,7 +10,7 @@
     --light-bg: #f9f9f9;
     --very-light-bg: #ffffff;
     --white: #ffffff;
-    --border-color: #eee;
+    --border-color: #f3f3f3;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     --button-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
     --menu-transition-speed: 0.6s;
@@ -30,7 +30,12 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--text-color);
     line-height: 1.7;
-    background-color: var(--very-light-bg);
+    /*background-color: var(--very-light-bg);*/
+    background-color: #f4f2f0;  /* fallback for old browsers */
+
+    background: #F4F2F0;
+background: radial-gradient(circle, rgba(244, 242, 240, 0.51) 0%, rgba(255, 254, 252, 1) 100%);
+
 }
 
 /* Prevent scrolling when mobile menu is open */
@@ -326,7 +331,7 @@ img {
     }
 
     .main-header .container .main-nav > ul {
-    /*    maybe need fix here*/
+        /*    maybe need fix here*/
     }
 
     .mobile-nav-toggle {
@@ -334,8 +339,8 @@ img {
     }
 
     .header-book-btn {
-        font-size: 0.5em!important;
-        padding: 1em!important;
+        font-size: 0.5em !important;
+        padding: 1em !important;
     }
 
 }
@@ -462,7 +467,7 @@ img {
 /* Specialties Section */
 .specialties-section {
     background-color: var(--white);
-    text-align: center;
+    text-align: left;
 }
 
 .specialties-grid {
@@ -479,6 +484,7 @@ img {
     text-align: left;
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 1px 1px 5px rgba(81, 81, 81, 0.1);
 }
 
 .specialty-card:hover {
@@ -530,7 +536,7 @@ img {
 /* Testimonials Section */
 .testimonials-section {
     background-color: var(--white);
-    text-align: center;
+    text-align: left;
 }
 
 .testimonial-grid {
@@ -572,6 +578,7 @@ img {
 .testimonial-card p {
     font-style: italic;
     color: var(--text-color);
+    text-align: left;
 }
 
 /* CTA Section */
@@ -884,7 +891,7 @@ img {
 
     .hero {
         padding: 60px 0;
-        text-align: center;
+        text-align: left;
         width: 80%;
     }
 
@@ -907,6 +914,11 @@ img {
         align-items: center;
         flex-direction: column;
         gap: 25px;
+        text-align: center;
+    }
+
+    .stats-section {
+        text-align: left;
     }
 
     .cta-stats {
@@ -933,6 +945,7 @@ img {
 }
 
 @media (max-width: 575px) {
+
     .section-padding {
         padding: 40px 0;
     }
@@ -950,12 +963,14 @@ img {
     }
 
     .trust-features .container {
-        flex-direction: column;
+        /*flex-direction: column;*/
+        justify-content: space-between;
         gap: 20px;
     }
 
     .trust-item {
-        flex-basis: 100%;
+        /*flex-basis: 100%;*/
+        font-size: 0.5em;
         padding: 10px 0;
     }
 
@@ -1029,10 +1044,11 @@ img {
     }
 
     .hero {
+        padding: 30px 0 10px 0;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         gap: 2em;
     }
 
@@ -1046,11 +1062,14 @@ img {
     }
 
     .hero .container h1 {
-        font-size: 2em;
+        font-size: 1.5em;
+        /*color: #292929;*/
+        font-weight: bold;
     }
 
     #hero-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
         height: 15em;
         border-radius: 25px;
         overflow: hidden;
@@ -1066,7 +1085,6 @@ img {
         object-fit: contain;
     }
 }
-
 
 
 /* Gallery Section */
@@ -1121,12 +1139,11 @@ img {
 }
 
 
-
 /* Swallow Icon */
 .swallow-icon {
     opacity: 0.8;
     aspect-ratio: 1/1;
-    width: 35px;
+    width: 75px;
     object-fit: cover;
     position: fixed;
     bottom: 20px;
@@ -1150,7 +1167,7 @@ img {
 .swallow-modal {
     display: none;
     position: fixed;
-    bottom: 70px; /* Above icon */
+    bottom: 100px; /* Above icon */
     right: 20px;
     width: 25%; /* ~1/4 screen on large screens */
     max-width: 300px;
@@ -1175,7 +1192,7 @@ img {
     font-size: 0.9rem;
     color: var(--text-color, #333);
     margin-bottom: 15px;
-    max-height: 100px; /* Limit text height */
+    max-height: 130px; /* Limit text height */
     overflow-y: auto;
 }
 
@@ -1197,6 +1214,10 @@ img {
         max-width: none;
         right: 10px;
         bottom: 60px;
+    }
+
+    .swallow-icon {
+        width: 50px;
     }
 }
 
