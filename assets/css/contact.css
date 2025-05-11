@@ -152,3 +152,8 @@
     color: var(--primary-color);
     cursor: pointer;
 }
+
+.booking-form {
+    margin: 2em auto 0 auto;
+    max-width: 500px;
+}
