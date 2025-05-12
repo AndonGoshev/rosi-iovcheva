@@ -11,8 +11,10 @@
     <meta name="author" content="Роси Йовчева">
 
     <meta property="og:title" content="Роси Йовчева - Психолог и Терапевт">
-    <meta property="og:description" content="Роси Йовчева - сертифициран психолог и терапевт, предлагащ консултации и терапия в приятна и доверена среда.">
-    <meta property="og:image" content="https://andongoshev.github.io/rosi-iovcheva/assets/images/rosi2.jpg"> <!-- should be 1200x630px -->
+    <meta property="og:description"
+          content="Роси Йовчева - сертифициран психолог и терапевт, предлагащ консултации и терапия в приятна и доверена среда.">
+    <meta property="og:image" content="https://andongoshev.github.io/rosi-iovcheva/assets/images/rosi2.jpg">
+    <!-- should be 1200x630px -->
     <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +25,60 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
+
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="assets/css/silktide-consent-manager.css">
+    <script src="assets/js/silktide-consent-manager.js"></script>
+    <script>
+        silktideCookieBannerManager.updateCookieBannerConfig({
+            background: {
+                showBackground: true
+            },
+            cookieIcon: {
+                position: "bottomLeft"
+            },
+            cookieTypes: [
+                {
+                    id: "",
+                    name: "Задължителни",
+                    description: "<p>Тези бисквитки са необходими за правилното функциониране на уебсайта и не могат да бъдат изключени. Те помагат при действия като влизане в акаунт и настройване на предпочитанията за поверителност.</p>",
+                    required: true,
+                    onAccept: function () {
+                        // console.log('Add logic for the required Задължителни here');
+                    }
+                },
+                {
+                    id: "",
+                    name: "Аналитични",
+                    description: "<p>Тези бисквитки ни помагат да подобрим сайта, като проследяват кои страници са най-популярни и как посетителите се придвижват в него.</p>",
+                    required: false,
+                }
+            ],
+            text: {
+                banner: {
+                    description: "<p>Ние използваме бисквитки на нашия сайт, за да подобрим вашето потребителско изживяване, да предоставим персонализирано съдържание и да анализираме трафика си. <a href=\"localhost:63342/cookie-policy\" target=\"_blank\">Политика</a></p>",
+                    acceptAllButtonText: "Приеми всички",
+                    acceptAllButtonAccessibleLabel: "Accept all cookies",
+                    rejectNonEssentialButtonText: "Отхвърли незадължителни.",
+                    rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+                    preferencesButtonText: "Преференции",
+                    preferencesButtonAccessibleLabel: "Toggle preferences"
+                },
+                preferences: {
+                    title: "Персонализирай",
+                    description: "<p>Ние зачитаме правото ви на поверителност. Можете да откажете някои видове бисквитки. Вашите предпочитания ще важат за целия ни уебсайт.</p>",
+                    creditLinkText: "Get this banner for free",
+                    creditLinkAccessibleLabel: "Get this banner for free"
+                }
+            },
+            position: {
+                banner: "bottomCenter"
+            }
+        });
+    </script>
+
 </head>
 <body>
+
 <header class="main-header">
     <div class="container">
         <a href="index.html" class="logo" style="overflow: hidden">
@@ -67,28 +121,6 @@
     </div>
     <div id="hero-img"><img src="assets/images/rosi2.jpg" alt="Роси Йовчева"></div>
 </section>
-
-
-<!--<section class="trust-features">-->
-<!--    <div class="container">-->
-<!--        <div class="trust-item">-->
-<!--            <i class="fas fa-user-check"></i>-->
-<!--            <span>Сертифициран специалист</span>-->
-<!--        </div>-->
-<!--        <div class="trust-item">-->
-<!--            <i class="fas fa-comments"></i>-->
-<!--            <span>Конфиденциалност</span>-->
-<!--        </div>-->
-<!--        <div class="trust-item">-->
-<!--            <i class="fas fa-shield-alt"></i>-->
-<!--            <span>Сигурна среда</span>-->
-<!--        </div>-->
-<!--        <div class="trust-item">-->
-<!--            <i class="fas fa-hand-holding-heart"></i>-->
-<!--            <span>Индивидуален подход</span>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 <section id="about" class="section-padding">
     <div class="container about-section">
